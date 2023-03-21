@@ -2,19 +2,24 @@
 /**
  * print_alphabet_x10 - Prints the alphabet 10 times.
  *
- * Return: Always 0 
+ * Return: Always 0 (Success)
  */
 void print_alphabet_x10(void)
 {
-	int i;
-	int j;
+   char letter = 'a'; // start with the first lowercase letter
+    int i = 0;
 
-	for (j = 1; i <= 10; i++)
-	{
-		for (j = 97; j <= 122; j++)
-		{
-			_putchar(j);
-		}
-		 _putchar('\n');
-	}
+    while (i < 10)
+    {
+        int j = 0;
+        while (j < 26)
+        {
+            _putchar(letter);
+            letter++;
+            j++;
+        }
+        _putchar('\n');
+        i++;
+        letter = 'a'; // reset the letter to 'a' for the next line
+    }
 }
