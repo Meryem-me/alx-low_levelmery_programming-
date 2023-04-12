@@ -1,21 +1,27 @@
 #include "main.h"
-
+#include <stdlib.h>
 /**
- * *create_array - creates an array of chars,
- * and initializes it with a specific char.
- * @size: size of the array
- * @c: char to initialize
- * Return: pointer to the array initialized or NULL
+ * create_array - Function that's creates an array of chars.
+ * @size: The size of the array.
+ * @c: The Tstoraged char
+ *
+ * Return: The pointer of an array of chars
  */
-char *create_array(unisigned int size, char c)
+char *create_array(unsigned int size, char c)
 {
-	char *n = malloc(size);
+	char *cr;
+	unsigned int a;
 
-	if (size == 0 || n== 0)
-		return (0);
+	if (size == 0)
+		return (NULL);
 
-	while (size--)
-		n[size] = c;
+	cr = malloc(sizeof(c) * size);
 
-	return (n);
+	if (cr == NULL)
+		return (NULL);
+
+	for (a = 0; a < size; a++)
+		cr[a] = c;
+
+	return (cr);
 }
