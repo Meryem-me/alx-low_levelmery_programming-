@@ -1,6 +1,6 @@
-#ifndef SIZE_H
-#define SIZE_H
+#ifndef ABS_H
+#define ABS_H
 
-#define SIZE 1024
+#define ABS(x) ((x) < 0 ? -(x) : (x))
 
 #endif
