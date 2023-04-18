@@ -1,6 +1,6 @@
-#ifndef _FUNCTION_LIKE_MACRO_H
-#define _FUNCTION_LIKE_MACRO_H
+#ifndef SIZE_H
+#define SIZE_H
 
-#define ABC(x) ((x) < 0 ? (-(x)) : (x))
+#define SIZE 1024
 
-#endif /* _FUNCTION_LIKE_MACRO_H */
+#endif
